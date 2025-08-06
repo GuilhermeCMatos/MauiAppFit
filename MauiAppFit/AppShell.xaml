@@ -7,9 +7,25 @@
     Shell.FlyoutBehavior="Flyout"
     Title="MauiAppFit">
 
+    <TabBar>
+        <Tab Title="Nova Atividade" Icon="exercicio.png"
+             Route="CadastroAtividade"
+             <ShellContent>
+            <Views:CadastroAtividade 
+                Title="Cadastro de Atividade" />
+            </ShellContent>
+        </Tab>
+        <Tab
+            Title="Minhas Atividades" Icon="meus_exercicios.png"
+            Route="MinhasAtividades"
+            <ShellContent>
+            <Views:ListaAtividade Title="Minhas Atividades"/>
+            </ShellContent>
+        </Tab>
+    </TabBar>
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+       Title="Home"
+       ContentTemplate="{DataTemplate local:MainPage}"
+       Route="MainPage" />
 
 </Shell>
